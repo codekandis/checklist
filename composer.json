@@ -54,6 +54,10 @@
 				"config/",
 				"public/",
 				"src/"
+			],
+			"CodeKandis\\CheckList\\Configurations\\Plain\\": [
+				"config/",
+				"src/Configurations/Plain"
 			]
 		}
 	},

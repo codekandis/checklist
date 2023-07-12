@@ -1,0 +1,17 @@
+<?php declare( strict_types = 1 );
+namespace CodeKandis\CheckList\Configurations;
+
+use CodeKandis\Tiphy\Configurations\ConfigurationRegistryInterface as OriginConfigurationRegistryInterface;
+use CodeKandis\TiphyAuthenticationIntegration\Configurations\SessionAuthenticatorConfigurationRegistryInterface as SessionAuthenticatorConfigurationRegistryInterface;
+use CodeKandis\TiphyPersistenceIntegration\Configurations\ConfigurationRegistryInterface as PersistenceConfigurationRegistryInterface;
+use CodeKandis\TiphySentryClientIntegration\Configurations\ConfigurationRegistryInterface as SentryClientConfigurationRegistryInterface;
+use CodeKandis\TiphySessionIntegration\Configurations\ConfigurationRegistryInterface as SessionConfigurationRegistryInterface;
+
+/**
+ * Represents the interface of any frontend configuration registry.
+ * @package codekandis/checklist
+ * @author Christian Ramelow <info@codekandis.net>
+ */
+interface ConfigurationRegistryInterface extends OriginConfigurationRegistryInterface, PersistenceConfigurationRegistryInterface, SentryClientConfigurationRegistryInterface, SessionAuthenticatorConfigurationRegistryInterface, SessionConfigurationRegistryInterface
+{
+}
