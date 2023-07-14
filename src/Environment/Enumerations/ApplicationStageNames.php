@@ -8,4 +8,9 @@ namespace CodeKandis\CheckList\Environment\Enumerations;
  */
 abstract class ApplicationStageNames
 {
+	/**
+	 * Represents the application stage name `api`.
+	 * @var string
+	 */
+	public const API = 'api';
 }
