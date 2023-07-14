@@ -4,6 +4,8 @@ namespace CodeKandis\CheckList\Environment\Http\UriBuilders;
 use CodeKandis\CheckList\Api\Http\UriBuilders\ApiUriBuilder;
 use CodeKandis\CheckList\Api\Http\UriBuilders\ApiUriBuilderInterface;
 use CodeKandis\CheckList\Environment\Enumerations\ApplicationStageNames;
+use CodeKandis\CheckList\Frontend\Http\UriBuilders\FrontendUriBuilder;
+use CodeKandis\CheckList\Frontend\Http\UriBuilders\FrontendUriBuilderInterface;
 use CodeKandis\Tiphy\Http\UriBuilders\AbstractUriBuilderBuilder;
 
 /**
@@ -20,6 +22,16 @@ class UriBuilderBuilder extends AbstractUriBuilderBuilder implements UriBuilderB
 	{
 		return new ApiUriBuilder(
 			$this->uriBuilderConfiguration->getPreset( ApplicationStageNames::API )
+		);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public function buildFrontendUriBuilder(): FrontendUriBuilderInterface
+	{
+		return new FrontendUriBuilder(
+			$this->uriBuilderConfiguration->getPreset( ApplicationStageNames::FRONTEND )
 		);
 	}
 }

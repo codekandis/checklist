@@ -2,6 +2,7 @@
 namespace CodeKandis\CheckList\Environment\Http\UriBuilders;
 
 use CodeKandis\CheckList\Api\Http\UriBuilders\ApiUriBuilderInterface;
+use CodeKandis\CheckList\Frontend\Http\UriBuilders\FrontendUriBuilderInterface;
 
 /**
  * Represents the interface of any URI builder builder.
@@ -15,4 +16,10 @@ interface UriBuilderBuilderInterface
 	 * @return ApiUriBuilderInterface The API URI builder.
 	 */
 	public function buildApiUriBuilder(): ApiUriBuilderInterface;
+
+	/**
+	 * Builds a frontend URI builder.
+	 * @return FrontendUriBuilderInterface The frontend URI builder.
+	 */
+	public function buildFrontendUriBuilder(): FrontendUriBuilderInterface;
 }

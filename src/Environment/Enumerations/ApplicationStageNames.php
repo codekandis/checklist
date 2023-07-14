@@ -13,4 +13,10 @@ abstract class ApplicationStageNames
 	 * @var string
 	 */
 	public const API = 'api';
+
+	/**
+	 * Represents the application stage name `frontend`.
+	 * @var string
+	 */
+	public const FRONTEND = 'frontend';
 }
