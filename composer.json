@@ -33,6 +33,7 @@
 		"php": "^7.4",
 		"codekandis/authentication": "^0",
 		"codekandis/configurations": "^0",
+		"codekandis/jotunheim": "^0",
 		"codekandis/persistence": "^0",
 		"codekandis/sentry-client": "^1",
 		"codekandis/session": "^0",
@@ -42,7 +43,9 @@
 		"codekandis/tiphy-sentry-client-integration": "^0",
 		"codekandis/tiphy-session-integration": "^0",
 		"codekandis/validators": "^0",
-		"php-http/message-factory": "^1"
+		"fortawesome/font-awesome": "^6",
+		"php-http/message-factory": "^1",
+		"twbs/bootstrap": "^5"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master",
