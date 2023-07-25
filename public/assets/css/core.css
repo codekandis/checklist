@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+@import '../fonts/fonts.css';
+
+:root
+{
+	--base-page-padding:             1.6rem;
+	--base-line-height:              1.4rem;
+	--base-font-family:              'Noto Sans';
+	--base-font-size:                10pt;
+	--codekandis-color-orange:       rgba(255, 160, 0, 1);
+	--codekandis-color-dark-orange:  rgb(223, 128, 0, 1);
+	--codekandis-color-blue:         rgba(0, 160, 255, 1);
+	--codekandis-color-green:        rgba(0, 160, 0, 1);
+	--codekandis-color-lighter-gray: rgb(232, 232, 232, 1);
+	--codekandis-color-light-gray:   rgba(208, 208, 208, 1);
+	--codekandis-color-gray:         rgba(160, 160, 160, 1);
+	--codekandis-color-dark-gray:    rgba(128, 128, 128, 1);
+	--codekandis-color-darker-gray:  rgba(64, 64, 64, 1);
+}
+
+*
+{
+	box-sizing:  border-box;
+	margin:      0;
+	padding:     0;
+	line-height: inherit;
+	font-family: inherit;
+	font-size:   inherit;
+	color:       inherit;
+	cursor:      inherit;
+}
+
+html
+{
+	font-size: var(--base-font-size);
+	color:     var(--codekandis-color-darker-gray);
+}
+
+a,
+button,
+select,
+input[type='submit'],
+input[type='checkbox'],
+input[type='radio']
+{
+	cursor: pointer;
+}
+
+a
+{
+	color:           var(--codekandis-color-blue);
+	font-style:      normal;
+	text-decoration: none;
+	cursor:          pointer;
+}
+
+a:hover
+{
+	color: var(--codekandis-color-orange);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-weight: bold;
+}
+
+h1,
+h2,
+h3
+{
+	margin: 0 0 1.3em 0;
+}
+
+h1
+{
+	font-size: 2.1rem;
+}
+
+h2
+{
+	font-size: 1.7rem;
+}
+
+h3
+{
+	font-size: 1.3rem;
+}
+
+textarea,
+input[type='text']:not([readonly]):not([disabled]),
+input[type='password']:not([readonly]):not([disabled])
+input[type='email']:not([readonly]):not([disabled])
+{
+	cursor: text;
+}
+
+#page
+{
+	font-family: 'Noto Sans';
+}
+
+#page header
+{
+	padding:   0 calc(var(--base-page-padding) / 2);
+	height:    6rem;
+	font-size: 0;
+}
+
+#page > *:not(header)
+{
+	padding: 0 var(--base-page-padding);
+}
+
+#page header nav
+{
+	border-top-style:    solid;
+	border-top-width:    0.25rem;
+	border-top-color:    var(--codekandis-color-orange);
+	border-bottom-style: solid;
+	border-bottom-width: 0.1rem;
+	border-bottom-color: var(--codekandis-color-light-gray);
+}
+
+#page header nav > *
+{
+	display:   inline-block;
+	font-size: 1rem;
+}
+
+#page header nav > * > *
+{
+	padding: 1.2rem calc(var(--base-page-padding) / 2);
+}
+
+#page header nav > * > *:hover
+{
+	background-color: var(--codekandis-color-lighter-gray)
+}
