@@ -2,6 +2,7 @@
 namespace CodeKandis\CheckList\Configurations\Plain;
 
 use CodeKandis\CheckList\Environment\Enumerations\ApplicationStageNames;
+use CodeKandis\CheckList\Frontend\Http\FrontendUriNames;
 
 return [
 	ApplicationStageNames::API      => [
@@ -14,6 +15,8 @@ return [
 		'schema'       => 'https',
 		'host'         => 'checklist.codekandis',
 		'baseUri'      => '',
-		'relativeUris' => []
+		'relativeUris' => [
+			FrontendUriNames::INDEX => '/'
+		]
 	]
 ];

@@ -8,4 +8,9 @@ namespace CodeKandis\CheckList\Frontend\Http\UriBuilders;
  */
 interface FrontendUriBuilderInterface
 {
+	/**
+	 * Builds the URI `index`.
+	 * @return string The URI `index`.
+	 */
+	public function buildIndexUri(): string;
 }

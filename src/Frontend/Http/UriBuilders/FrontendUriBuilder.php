@@ -1,6 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\CheckList\Frontend\Http\UriBuilders;
 
+use CodeKandis\CheckList\Frontend\Http\FrontendUriNames;
 use CodeKandis\Tiphy\Http\UriBuilders\AbstractUriBuilder;
 
 /**
@@ -10,4 +11,11 @@ use CodeKandis\Tiphy\Http\UriBuilders\AbstractUriBuilder;
  */
 class FrontendUriBuilder extends AbstractUriBuilder implements FrontendUriBuilderInterface
 {
+	/**
+	 * {@inheritDoc}
+	 */
+	public function buildIndexUri(): string
+	{
+		return $this->build( FrontendUriNames::INDEX );
+	}
 }

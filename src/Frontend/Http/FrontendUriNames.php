@@ -8,4 +8,9 @@ namespace CodeKandis\CheckList\Frontend\Http;
  */
 abstract class FrontendUriNames
 {
+	/**
+	 * Represents the URI name `index`.
+	 * @var string
+	 */
+	public const INDEX = 'index';
 }
