@@ -1,6 +1,7 @@
 'use strict';
 
 import { AbstractRoutesConfiguration } from '../../libraries/jotunheim/Configurations/AbstractRoutesConfiguration.js';
+import { IndexApplicationPage } from '../ApplicationPages/IndexApplicationPage.js';
 
 /**
  * Represents a routes configuration.
@@ -11,5 +12,7 @@ export class RoutesConfiguration extends AbstractRoutesConfiguration
 	/**
 	 * @inheritdoc
 	 */
-	__routes = {};
+	__routes = {
+		'/': IndexApplicationPage,
+	};
 }
