@@ -2,6 +2,8 @@
 namespace CodeKandis\CheckList\Configurations\Plain;
 
 use CodeKandis\CheckList\Environment\Enumerations\ApplicationStageNames;
+use CodeKandis\CheckList\Frontend\Actions as Frontend;
+use CodeKandis\Tiphy\Http\Requests\Methods;
 
 return [
 	ApplicationStageNames::API      => [
@@ -10,6 +12,10 @@ return [
 	],
 	ApplicationStageNames::FRONTEND => [
 		'baseRoute' => '',
-		'routes'    => []
+		'routes'    => [
+			'/' => [
+				Methods::GET => Frontend\Get\IndexAction::class
+			]
+		]
 	]
 ];
