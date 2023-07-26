@@ -1,0 +1,202 @@
+<?php declare( strict_types = 1 );
+namespace CodeKandis\CheckList\Frontend\Templates\Plain\Common;
+
+/**
+ * @var string $htmlTitle
+ */
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?php echo $htmlTitle; ?> - CheckList</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="data:,"/>
+	<link rel="modulepreload" href="/assets/javascript/Application.js"/>
+	<link rel="preload" as="style" href="/assets/libraries/font-awesome/all.min.css"/>
+	<link rel="preload" as="style" href="/assets/libraries/bootstrap/css/bootstrap.min.css"/>
+	<link rel="preload" as="style" href="/assets/css/core.css"/>
+
+	<?php
+	if ( true === isset( $additionalPrecedingLinkedStylesheets ) )
+	{
+		foreach ( $additionalPrecedingLinkedStylesheets as $additionalPrecedingLinkedStylesheet )
+		{
+			echo <<< END
+				<link rel="preload" as="style" href="{$additionalPrecedingLinkedStylesheet}"/>
+			END;
+		}
+	}
+	if ( true === isset( $additionalPrecedingInlineStylesheets ) )
+	{
+		foreach ( $additionalPrecedingInlineStylesheets as $additionalPrecedingInlineStylesheet )
+		{
+			echo <<< END
+				<style>
+					{$additionalPrecedingInlineStylesheet}
+				</style>
+			END;
+		}
+	}
+	if ( true === isset( $additionalFollowingLinkedStylesheets ) )
+	{
+		foreach ( $additionalFollowingLinkedStylesheets as $additionalFollowingLinkedStylesheet )
+		{
+			echo <<< END
+				<link rel="preload" as="style" href="{$additionalFollowingLinkedStylesheet}"/>
+			END;
+		}
+	}
+	?>
+
+	<?php
+	if ( true === isset( $additionalPrecedingLinkedJavaScripts ) )
+	{
+		foreach ( $additionalPrecedingLinkedJavaScripts as $additionalPrecedingLinkedJavaScript )
+		{
+			echo <<< END
+				<link rel="preload" as="script" href="{$additionalPrecedingLinkedJavaScript}"/>
+			END;
+		}
+	}
+	if ( true === isset( $additionalPrecedingLinkedModularJavaScripts ) )
+	{
+		foreach ( $additionalPrecedingLinkedModularJavaScripts as $additionalPrecedingLinkedModularJavaScript )
+		{
+			echo <<< END
+				<link type="modulepreload" href="{$additionalPrecedingLinkedModularJavaScript}"/>
+			END;
+		}
+	}
+	?>
+
+	<?php
+	if ( true === isset( $additionalFollowingLinkedJavaScripts ) )
+	{
+		foreach ( $additionalFollowingLinkedJavaScripts as $additionalFollowingLinkedJavaScript )
+		{
+			echo <<< END
+				<link rel="preload" as="script" href="{$additionalFollowingLinkedJavaScript}"/>
+			END;
+		}
+	}
+	if ( true === isset( $additionalFollowingLinkedModularJavaScripts ) )
+	{
+		foreach ( $additionalFollowingLinkedModularJavaScripts as $additionalFollowingLinkedModularJavaScript )
+		{
+			echo <<< END
+				<link type="modulepreload" href="{$additionalFollowingLinkedModularJavaScript}"/>
+			END;
+		}
+	}
+	?>
+
+	<?php
+	if ( true === isset( $additionalPrecedingLinkedJavaScripts ) )
+	{
+		foreach ( $additionalPrecedingLinkedJavaScripts as $additionalPrecedingLinkedJavaScript )
+		{
+			echo <<< END
+				<script type="text/javascript" src="{$additionalPrecedingLinkedJavaScript}"></script>
+			END;
+		}
+	}
+	if ( true === isset( $additionalPrecedingLinkedModularJavaScripts ) )
+	{
+		foreach ( $additionalPrecedingLinkedModularJavaScripts as $additionalPrecedingLinkedModularJavaScript )
+		{
+			echo <<< END
+				<script type="module" src="{$additionalPrecedingLinkedModularJavaScript}"></script>
+			END;
+		}
+	}
+	if ( true === isset( $additionalPrecedingInlineJavaScripts ) )
+	{
+		foreach ( $additionalPrecedingInlineJavaScripts as $additionalPrecedingInlineJavaScript )
+		{
+			echo <<< END
+				<script type="text/javascript">
+					{$additionalPrecedingInlineJavaScript}
+				</script>
+			END;
+		}
+	}
+	?>
+	<script type="module" src="/assets/javascript/Application.js"></script>
+	<?php
+	if ( true === isset( $additionalFollowingLinkedJavaScripts ) )
+	{
+		foreach ( $additionalFollowingLinkedJavaScripts as $additionalFollowingLinkedJavaScript )
+		{
+			echo <<< END
+				<script type="text/javascript" src="{$additionalFollowingLinkedJavaScript}"></script>
+			END;
+		}
+	}
+	if ( true === isset( $additionalFollowingLinkedModularJavaScripts ) )
+	{
+		foreach ( $additionalFollowingLinkedModularJavaScripts as $additionalFollowingLinkedModularJavaScript )
+		{
+			echo <<< END
+				<script type="module" src="{$additionalFollowingLinkedModularJavaScript}"></script>
+			END;
+		}
+	}
+	if ( true === isset( $additionalFollowingInlineJavaScripts ) )
+	{
+		foreach ( $additionalFollowingInlineJavaScripts as $additionalFollowingInlineJavaScript )
+		{
+			echo <<< END
+				<script type="text/javascript">
+					{$additionalFollowingInlineJavaScript}
+				</script>
+			END;
+		}
+	}
+	if ( true === isset( $additionalPrecedingLinkedStylesheets ) )
+	{
+		foreach ( $additionalPrecedingLinkedStylesheets as $additionalPrecedingLinkedStylesheet )
+		{
+			echo <<< END
+				<link rel="stylesheet" type="text/css" href="{$additionalPrecedingLinkedStylesheet}"/>
+			END;
+		}
+	}
+	if ( true === isset( $additionalPrecedingInlineStylesheets ) )
+	{
+		foreach ( $additionalPrecedingInlineStylesheets as $additionalPrecedingInlineStylesheet )
+		{
+			echo <<< END
+				<style>
+					{$additionalPrecedingInlineStylesheet}
+				</style>
+			END;
+		}
+	}
+	?>
+	<link rel="stylesheet" type="text/css" href="/assets/libraries/font-awesome/all.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/assets/libraries/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/assets/css/core.css"/>
+	<?php
+	if ( true === isset( $additionalFollowingLinkedStylesheets ) )
+	{
+		foreach ( $additionalFollowingLinkedStylesheets as $additionalFollowingLinkedStylesheet )
+		{
+			echo <<< END
+				<link rel="stylesheet" type="text/css" href="{$additionalFollowingLinkedStylesheet}"/>
+			END;
+		}
+	}
+	if ( true === isset( $additionalFollowingInlineStylesheets ) )
+	{
+		foreach ( $additionalFollowingInlineStylesheets as $additionalFollowingInlineStylesheet )
+		{
+			echo <<< END
+				<style>
+					{$additionalFollowingInlineStylesheet}
+				</style>
+			END;
+		}
+	}
+	?>
+</head>

@@ -1,0 +1,22 @@
+<?php declare( strict_types = 1 );
+namespace CodeKandis\CheckList\Frontend\Templates\Plain;
+
+$htmlTitle = 'Checklist';
+require_once __DIR__ . '/Common/htmlHeader.phtml';
+?>
+	<body>
+	<div id="page">
+		<header class="container-fluid">
+			<?php
+			require_once __DIR__ . '/Common/navigation.phtml';
+			?>
+		</header>
+		<section class="content container-fluid">
+			<h1 class="row">
+				<span class="col"><?php echo $htmlTitle; ?></span>
+			</h1>
+		</section>
+	</div>
+	</body>
+	<?php
+require_once __DIR__ . '/Common/htmlFooter.phtml';

@@ -1,0 +1,17 @@
+<?php declare( strict_types = 1 );
+namespace CodeKandis\CheckList\Frontend\Templates\Plain\Common;
+
+use CodeKandis\CheckList\Configurations\ConfigurationRegistry;
+use CodeKandis\CheckList\Environment\Http\UriBuilders\UriBuilderBuilder;
+
+$uriBuilder = ( new UriBuilderBuilder(
+	ConfigurationRegistry
+		::_()
+		->getUriBuilderConfiguration()
+) )
+	->buildFrontendUriBuilder();
+?>
+<div class="row">
+	<nav class="col">
+	</nav>
+</div>
