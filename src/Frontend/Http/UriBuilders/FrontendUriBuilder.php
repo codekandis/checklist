@@ -18,4 +18,12 @@ class FrontendUriBuilder extends AbstractUriBuilder implements FrontendUriBuilde
 	{
 		return $this->build( FrontendUriNames::INDEX );
 	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public function buildSignoutUri(): string
+	{
+		return $this->build( FrontendUriNames::SIGNOUT );
+	}
 }

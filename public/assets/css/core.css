@@ -142,3 +142,16 @@ input[type='email']:not([readonly]):not([disabled])
 {
 	background-color: var(--codekandis-color-lighter-gray)
 }
+
+#page header nav form button
+{
+	color:            var(--codekandis-color-blue);
+	border-style:     none;
+	background-color: transparent;
+	cursor:           pointer;
+}
+
+#page header nav form button:hover
+{
+	color: var(--codekandis-color-orange);
+}

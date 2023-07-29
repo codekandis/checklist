@@ -16,7 +16,8 @@ return [
 		'host'         => 'checklist.codekandis',
 		'baseUri'      => '',
 		'relativeUris' => [
-			FrontendUriNames::INDEX => '/'
+			FrontendUriNames::INDEX   => '/',
+			FrontendUriNames::SIGNOUT => '/signout'
 		]
 	]
 ];

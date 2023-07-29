@@ -13,4 +13,10 @@ abstract class FrontendUriNames
 	 * @var string
 	 */
 	public const INDEX = 'index';
+
+	/**
+	 * Represents the URI name `signout`.
+	 * @var string
+	 */
+	public const SIGNOUT = 'signout';
 }

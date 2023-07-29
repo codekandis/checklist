@@ -13,8 +13,11 @@ return [
 	ApplicationStageNames::FRONTEND => [
 		'baseRoute' => '',
 		'routes'    => [
-			'/' => [
+			'/'        => [
 				Methods::GET => Frontend\Get\IndexAction::class
+			],
+			'/signout' => [
+				Methods::POST => Frontend\Post\SignoutAction::class
 			]
 		]
 	]

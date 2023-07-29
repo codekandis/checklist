@@ -2,6 +2,7 @@
 namespace CodeKandis\CheckList;
 
 use CodeKandis\CheckList\Configurations\ConfigurationRegistry;
+use CodeKandis\CheckList\Development\Frontend\Actions\PreDispatchments\AuthenticationPreDispatcher;
 use CodeKandis\SentryClient\SentryClient;
 use CodeKandis\Tiphy\Actions\ActionDispatcher;
 use CodeKandis\TiphySentryClientIntegration\Development\Throwables\Handlers\InternalServerErrorThrowableHandler;
@@ -30,7 +31,10 @@ $sentryClient->register();
 
 $actionDispatcher = new ActionDispatcher(
 	$configurationRegistry->getRoutesConfiguration(),
-	null,
+	new AuthenticationPreDispatcher(
+		$configurationRegistry->getSessionsConfiguration(),
+		$configurationRegistry->getSessionAuthenticatorConfiguration()
+	),
 	new InternalServerErrorThrowableHandler( $sentryClient )
 );
 $actionDispatcher->dispatch();

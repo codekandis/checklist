@@ -13,5 +13,8 @@ $uriBuilder = ( new UriBuilderBuilder(
 ?>
 <div class="row">
 	<nav class="col">
+		<form method="POST" action="<?php echo $uriBuilder->buildSignoutUri() ?>">
+			<button type="submit">Sign Out</button>
+		</form>
 	</nav>
 </div>

@@ -13,4 +13,10 @@ interface FrontendUriBuilderInterface
 	 * @return string The URI `index`.
 	 */
 	public function buildIndexUri(): string;
+
+	/**
+	 * Builds the URI `signout`.
+	 * @return string The URI `signout`.
+	 */
+	public function buildSignoutUri(): string;
 }
