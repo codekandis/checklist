@@ -8,4 +8,9 @@ namespace CodeKandis\CheckList\Api\Http\UriBuilders;
  */
 interface ApiUriBuilderInterface
 {
+	/**
+	 * Builds the URI of the index.
+	 * @return string The URI of the index.
+	 */
+	public function buildIndexUri(): string;
 }

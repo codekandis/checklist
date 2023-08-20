@@ -8,4 +8,9 @@ namespace CodeKandis\CheckList\Api\Http;
  */
 abstract class ApiUriNames
 {
+	/**
+	 * Represents the URI name `index`.
+	 * @var string
+	 */
+	public const INDEX = 'index';
 }

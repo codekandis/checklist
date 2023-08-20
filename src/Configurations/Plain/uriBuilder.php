@@ -1,6 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\CheckList\Configurations\Plain;
 
+use CodeKandis\CheckList\Api\Http\ApiUriNames;
 use CodeKandis\CheckList\Environment\Enumerations\ApplicationStageNames;
 use CodeKandis\CheckList\Frontend\Http\FrontendUriNames;
 
@@ -9,7 +10,9 @@ return [
 		'schema'       => 'https',
 		'host'         => 'checklist.codekandis',
 		'baseUri'      => '/api',
-		'relativeUris' => []
+		'relativeUris' => [
+			ApiUriNames::INDEX => ''
+		]
 	],
 	ApplicationStageNames::FRONTEND => [
 		'schema'       => 'https',

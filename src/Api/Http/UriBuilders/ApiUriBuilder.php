@@ -1,6 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\CheckList\Api\Http\UriBuilders;
 
+use CodeKandis\CheckList\Api\Http\ApiUriNames;
 use CodeKandis\Tiphy\Http\UriBuilders\AbstractUriBuilder;
 
 /**
@@ -10,4 +11,11 @@ use CodeKandis\Tiphy\Http\UriBuilders\AbstractUriBuilder;
  */
 class ApiUriBuilder extends AbstractUriBuilder implements ApiUriBuilderInterface
 {
+	/**
+	 * {@inheritDoc}
+	 */
+	public function buildIndexUri(): string
+	{
+		return $this->build( ApiUriNames::INDEX );
+	}
 }
